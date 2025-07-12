@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxStrands - About Us</title>
+    <!-- Tailwind CSS CDN for responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for a clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS for minor adjustments and animations -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        /* Mobile menu specific styles */
+        .mobile-menu {
+            transition: transform 0.3s ease-out;
+            transform: translateX(100%);
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation Bar (Header) -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12 flex justify-between items-center fixed w-full z-20 top-0 rounded-b-lg">
+        <!-- Logo -->
+        <div class="flex items-center">
+            <a href="index.html" class="text-2xl font-bold text-purple-700 hover:text-purple-800 transition duration-300 ease-in-out">LuxStrands</a>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-gray-700 hover:text-purple-700 font-medium transition duration-300 ease-in-out">Home</a>
+            <a href="products.html" class="text-gray-700 hover:text-purple-700 font-medium transition duration-300 ease-in-out">Products</a>
+            <a href="ticketing.html" class="text-gray-700 hover:text-purple-700 font-medium transition duration-300 ease-in-out">Ticketing</a>
+            <a href="feedback.html" class="text-gray-700 hover:text-purple-700 font-medium transition duration-300 ease-in-out">Feedback</a>
+            <a href="knowledgebase.html" class="text-gray-700 hover:text-purple-700 font-medium transition duration-300 ease-in-out">Knowledge Base</a>
+            <a href="about.html" class="text-gray-700 hover:text-purple-700 font-medium transition duration-300 ease-in-out">About Us</a>
+        </nav>
+
+        <!-- Right side icons/buttons (e.g., Sign In, Cart, Mobile Menu Toggle) -->
+        <div class="flex items-center space-x-4">
+            <button class="bg-purple-700 text-white px-4 py-2 rounded-lg shadow-md hover:bg-purple-800 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50">
+                Sign In
+            </button>
+            <button class="text-gray-700 hover:text-purple-700 transition duration-300 ease-in-out">
+                <!-- Shopping Cart Icon (simple SVG) -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 0a2 2 0 100 4 2 2 0 000-4z" />
+                </svg>
+            </button>
+            <!-- Mobile Menu Button (Hamburger Icon) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-64 bg-white shadow-xl z-30 md:hidden p-6 pt-20">
+        <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-600 hover:text-purple-700 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <nav class="flex flex-col space-y-4 text-lg">
+            <a href="index.html" class="text-gray-800 hover:text-purple-700 font-medium transition duration-300 ease-in-out py-2 border-b border-gray-100">Home</a>
+            <a href="products.html" class="text-gray-800 hover:text-purple-700 font-medium transition duration-300 ease-in-out py-2 border-b border-gray-100">Products</a>
+            <a href="ticketing.html" class="text-gray-800 hover:text-purple-700 font-medium transition duration-300 ease-in-out py-2 border-b border-gray-100">Ticketing</a>
+            <a href="feedback.html" class="text-gray-800 hover:text-purple-700 font-medium transition duration-300 ease-in-out py-2 border-b border-gray-100">Feedback</a>
+            <a href="knowledgebase.html" class="text-gray-800 hover:text-purple-700 font-medium transition duration-300 ease-in-out py-2 border-b border-gray-100">Knowledge Base</a>
+            <a href="about.html" class="text-gray-800 hover:text-purple-700 font-medium transition duration-300 ease-in-out py-2">About Us</a>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="mt-24 py-16 px-6 md:px-12">
+        <section class="bg-white rounded-xl shadow-lg mx-auto max-w-5xl p-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900">About LuxStrands</h1>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12 mb-12">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/800x500/8A2BE2/FFFFFF?text=LuxStrands+Story" alt="LuxStrands Story" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Story</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        LuxStrands was founded with a passion for empowering individuals through exquisite hair. We believe that hair is not just an accessory, but a powerful expression of identity and confidence. Our journey began with a simple goal: to provide premium quality hair products that are accessible, ethically sourced, and designed to make every customer feel their absolute best.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        From humble beginnings, we've grown into a trusted brand, committed to excellence in every strand. We meticulously select our suppliers and ensure every product meets our rigorous standards for quality, durability, and natural beauty.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center justify-center gap-12 mb-12">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/800x500/DA70D6/FFFFFF?text=Mission+Vision" alt="Mission and Vision" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-center md:text-right">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Mission & Vision</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        <strong>Our Mission:</strong> To provide unparalleled quality hair products and exceptional customer service, enabling every individual to confidently express their unique beauty and style.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        <strong>Our Vision:</strong> To be the leading global destination for premium hair solutions, recognized for our commitment to quality, innovation, and customer satisfaction.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Our Values Section -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Values</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-purple-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-purple-800 mb-2">Quality Excellence</h3>
+                        <p class="text-gray-700">We are dedicated to sourcing and providing only the highest quality hair products that meet rigorous standards.</p>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-purple-800 mb-2">Customer Centricity</h3>
+                        <p class="text-gray-700">Our customers are at the heart of everything we do. We strive to exceed expectations with every interaction.</p>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-purple-800 mb-2">Integrity & Ethics</h3>
+                        <p class="text-gray-700">We operate with transparency, honesty, and ethical practices in all aspects of our business.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Meet the Team (Optional) -->
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Meet Our Team</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <img src="https://placehold.co/150x150/C0C0C0/FFFFFF?text=Founder" alt="Founder" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-semibold text-gray-900">Ifechukwu Nwatu</h3>
+                        <p class="text-purple-700 font-medium mb-2">Founder & CEO</p>
+                        <p class="text-gray-600 text-sm">Visionary leader passionate about empowering beauty through quality hair.</p>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <img src="https://placehold.co/150x150/ADD8E6/FFFFFF?text=Marketing" alt="Marketing Lead" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-semibold text-gray-900">Jane Smith</h3>
+                        <p class="text-purple-700 font-medium mb-2">Marketing Director</p>
+                        <p class="text-gray-600 text-sm">Drives our brand's message and connects us with our amazing community.</p>
+                    </div>
+                    <!-- Team Member 3 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <img src="https://placehold.co/150x150/F08080/FFFFFF?text=Support" alt="Support Manager" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-semibold text-gray-900">David Lee</h3>
+                        <p class="text-purple-700 font-medium mb-2">Customer Success Manager</p>
+                        <p class="text-gray-600 text-sm">Ensures every customer has a seamless and delightful experience with LuxStrands.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-6 md:px-12 rounded-t-lg mt-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Company Info -->
+            <div class="text-center md:text-left">
+                <h3 class="text-xl font-bold mb-4 text-purple-400">LuxStrands</h3>
+                <p class="text-gray-400">Your ultimate destination for premium hair products.</p>
+            </div>
+            <!-- Quick Links -->
+            <div class="text-center md:text-left">
+                <h3 class="text-xl font-bold mb-4 text-purple-400">Quick Links</h3>
+                <ul>
+                    <li class="mb-2"><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                    <li class="mb-2"><a href="products.html" class="text-gray-400 hover:text-white transition duration-300">Products</a></li>
+                    <li class="mb-2"><a href="ticketing.html" class="text-gray-400 hover:text-white transition duration-300">Ticketing</a></li>
+                    <li class="mb-2"><a href="feedback.html" class="text-gray-400 hover:text-white transition duration-300">Feedback</a></li>
+                    <li class="mb-2"><a href="knowledgebase.html" class="text-gray-400 hover:text-white transition duration-300">Knowledge Base</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="text-center md:text-left">
+                <h3 class="text-xl font-bold mb-4 text-purple-400">Contact Info</h3>
+                <p class="text-gray-400 mb-2">Email: info@luxstrands.com</p>
+                <p class="text-gray-400 mb-2">Phone: +234 801 234 5678</p>
+                <p class="text-gray-400">Address: 123 Elegance St, Port Harcourt, Nigeria</p>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+            &copy; 2025 LuxStrands. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        // Mobile Menu Toggle Logic
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+
+    <!-- HubSpot CRM Chatbot Integration Script -->
+    <script src="https://js.usemessages.com/messages.js"></script>
+    <script>
+        window.hsConversationsSettings = {
+            loadImmediately: true,
+        };
+        window.hsConversationsOnReady = [function(conversations) {
+            // Chatbot customization can go here
+        }];
+    </script>
+</body>
+</html>
